@@ -1,0 +1,61 @@
+body{
+    margin-left:10%;
+    margin-right:10%;
+}
+
+.param-menu{
+    height: 150px;
+}
+
+.color-pink{
+    background-color: #F200FF;
+}
+
+.padding-accueil{
+    margin-left:50px;
+}
+
+.padding-bouton-navbar{
+    margin-right:50px;
+}
+
+.center{
+    text-align:center;
+}
+.margin-top{
+    margin-top: 20px;
+}
+
+.full-right{
+    margin-left: 80%;
+}
+
+.width-30{
+    width: 30%;
+}
+
+.display-block{
+    display: inline-block;
+}
+
+.center{
+    margin-left: 10%;
+}
+
+.center-leads{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.width-70{
+    width: 70%;
+}
+
+#objectif{
+    margin-top: 80px;
+}
+
+#img-creation-sujet{
+    width: 25px;
+    height: 25px;
+}
