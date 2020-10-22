@@ -21,7 +21,7 @@
 <body>
         <div class="is-navbar-container param-menu is-shadow-3">
             <div class="is-brand padding-accueil">
-                <h1><b class="is-logo"><img src='../src/img/logoJpod.png'>&nbsp&nbsp Jpod 2.0</b></h1>
+                <h1><b class="is-logo"><img src='../src/img/logoJpod.png'>&nbsp&nbsp Jpod testtttt2.0</b></h1>
             </div>
             <div class="is-navbar">
                 <nav>
