@@ -1,28 +1,34 @@
-<?php include_once("header.php");?>
-<?php include_once("../Controller/BDDConnection.php");?>
-<?php include_once("../Controller/RequestBDD.php");?>
 <?php 
+    include_once("header.php");
+
     if(isset($_GET['suppr']) && $_GET['suppr'] == true)
     {
         supprTransaction($_GET['id']);
     }
 ?>
-<?php $budget = showBudgetTotal();?>
-<?php $budgetE = showBudgetTotalWithoutEconomy();?>
-<div class="margin-top">
-    <h2 class="center"><img src="../src/img/applications.png"> Applications Disponibles</h2>
-</div>
 
-<div class="alert is-success"><h2>BUDGET TOTAL : <?php echo $budget; ?> €</H2></div>
-<div class="alert is-success"><h2>BUDGET SANS ECONOMIE : <?php echo $budgetE; ?> €</H2></div>
+<!--=====================================
+/       Affichage des applications      /
+======================================-->
+<table style="font-size: 30px;" class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nom</th>
+      <th scope="col">Compte</th>
+      <th scope="col">Gérer</th>
+    </tr>
+  </thead>
+  <tbody>
+    <?php getApplications(); ?>
+  </tbody>
+</table>
 
-<?php
-    getApplications();
-?>
-
-
+<!--=====================================
+/       Affichage des transactions      /
+======================================-->
 <br><br><br><br><br><br>
-<table>
+<table class="table table-dark">
     <thead>
         <tr>
             <th>Projet</th>
@@ -36,7 +42,6 @@
     </tbody>
 </table>
 
-
-
-<?php include_once("../Controller/Login.php");?>
-<?php include_once("footer.php");?>
+<?php 
+    include_once("footer.php");
+?>
