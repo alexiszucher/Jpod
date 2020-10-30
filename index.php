@@ -1,6 +1,6 @@
 <?php 
     session_start();
-    include_once("Controller/CheckUser.php"); 
+    include_once("Function/user.php"); 
     $verif_user = check_user();
     if($verif_user == false)
     {
