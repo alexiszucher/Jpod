@@ -21,7 +21,7 @@
                 }
                 else
                 {
-                    echo "<tr><td><h4 style='color:red'>".$libelle."</h4></td><td><h4 style='color:red'>".strftime('%d-%m-%Y',strtotime($transact['date']))."</h4></td><td><h4 style='color:red'>- ".$transact['montant']." €</h4></td><td><a href='interface.php?suppr=true&id=".$transact['id']."'><img src='../resources/img/supprimer.png'></a></td></tr>";
+                    echo "<tr><td><p style='color:grey'>".$libelle."</p></td><td><p style='color:grey'>".strftime('%d-%m-%Y',strtotime($transact['date']))."</p></td><td><p style='color:grey'>- ".$transact['montant']." €</p></td><td><a href='interface.php?suppr=true&id=".$transact['id']."'><img src='../resources/img/supprimer.png'></a></td></tr>";
                 }                
             }
         }
