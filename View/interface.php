@@ -1,6 +1,8 @@
 <?php 
     include_once("header.php");
 
+    checkMAJTransactionsAutos();
+    
     if(isset($_GET['suppr']) && $_GET['suppr'] == true)
     {
         supprTransaction($_GET['id']);

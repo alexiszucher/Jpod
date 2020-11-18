@@ -25,6 +25,7 @@ function showCompte() {
     } else {
         document.getElementById("transaction").style.display = "none";
         document.getElementById("compte").style.display = "block";
+        document.getElementById("addTransactAuto").style.display = "none";
     }
 }
 
@@ -34,5 +35,16 @@ function showTransaction() {
     } else {
         document.getElementById("transaction").style.display = "block";
         document.getElementById("compte").style.display = "none";
+        document.getElementById("addTransactAuto").style.display = "none";
+    }
+}
+
+function showAddTransactAuto() {
+    if (document.getElementById("addTransactAuto").style.display == "block") {
+        document.getElementById("addTransactAuto").style.display = "none";
+    } else {
+        document.getElementById("addTransactAuto").style.display = "block";
+        document.getElementById("compte").style.display = "none";
+        document.getElementById("transaction").style.display = "none";
     }
 }

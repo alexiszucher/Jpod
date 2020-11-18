@@ -198,11 +198,6 @@
             $request->bindParam(':date', date('Y-m-d'));
             $request->execute();
 
-            $request = $bdd->prepare("UPDATE budget_applications SET budget=budget+:gain WHERE id_application=:id_app");
-            $request->bindParam(':id_app', $_SESSION['idApp']);
-            $request->bindParam(':gain', $gain);
-            $request->execute();
-
             $check = "<div class='alert is-success'>Le montant a été ajouté !</div>";
         }
         catch(Exception $e)
@@ -223,11 +218,6 @@
             $request->bindParam(':id_app', $_SESSION['idApp']);
             $request->bindParam(':montant', $depense);
             $request->bindParam(':date', date('Y-m-d'));
-            $request->execute();
-
-            $request = $bdd->prepare("UPDATE budget_applications SET budget=budget-:depense WHERE id_application=:id_app");
-            $request->bindParam(':id_app', $_SESSION['idApp']);
-            $request->bindParam(':depense', $depense);
             $request->execute();
 
             $check = "<div class='alert is-success'>Le montant a été ajouté !</div>";

@@ -23,12 +23,14 @@ CREATE TABLE droits_applications
     CONSTRAINT fk_droit_application FOREIGN KEY(id_application) REFERENCES applications(id)
 );
 
-CREATE TABLE budget_applications
+CREATE TABLE transactions_automatiques
 (
     id int NOT NULL PRIMARY KEY AUTO_INCREMENT,
     id_application int NOT NULL,
-    budget float NOT NULL,
-    CONSTRAINT fk_buget_application FOREIGN KEY(id_application) REFERENCES applications(id)
+    montant float NOT NULL,
+    gains int NOT NULL,
+    dateDerniereMAJ date DEFAULT NULL,
+    CONSTRAINT fk_transact_auto_application FOREIGN KEY(id_application) REFERENCES applications(id)
 );
 
 CREATE TABLE transactions

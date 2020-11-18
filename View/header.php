@@ -4,16 +4,25 @@
     include_once("../Function/application.php");
     include_once("../Function/transaction.php");
     include_once("../Function/lead.php");
+    include_once("../Function/transactionAutomatique.php");
 
     if(check_user() == false)
     {
-        header('Location: connexion.php');
+        ?>
+            <script>
+                document.location.href="connexion.php";
+            </script>
+        <?php
     }
 
     if(isset($_GET['deco']) && $_GET['deco'] == true)
     {
         unset($_SESSION['email']);
-        header('Location: connexion.php');
+        ?>
+            <script>
+                document.location.href="connexion.php";
+            </script>
+        <?php
     }
 ?>
 
@@ -59,6 +68,8 @@
                             <h5><?php echo $_SESSION['email'] ?>
                                 &nbsp&nbsp&nbsp
                                 <a href="interface.php" class="btn btn-primary">Interface</a>
+                                &nbsp
+                                <a href="transactionAutomatique.php" class="btn btn-primary">Transactions Auto</a>
                                 &nbsp
                                 <a href="?deco=true" class="btn btn-primary">Se déconnecter</a>
                             </h5>
