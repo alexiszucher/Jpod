@@ -30,7 +30,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>Jpod 3.0 - Gestion Finance</title>
+    <title>Jpod 4.0 - Gestion Finance</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/png" href="../src/img/logoJpod.png" />
@@ -45,7 +45,7 @@
     <div style="background: linear-gradient(135deg, #FFAD16, #FF4528);" class="container-fluid">
         <div class="row">
             <div class="col-6">
-                <h3 style="color:white;"><img src='../resources/img/logoJpod.png'>&nbsp&nbsp Jpod 3.0 Gestion Finance</b></h3>
+                <h3 style="color:white;"><img src='../resources/img/logoJpod.png'>&nbsp&nbsp Jpod 4.0 Gestion Finance</b></h3>
             </div>
             <div align="right" style="margin-top:3%" class="col-6">
                 <svg width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-wallet2" fill="white" xmlns="http://www.w3.org/2000/svg">
