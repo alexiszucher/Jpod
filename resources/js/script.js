@@ -1,8 +1,3 @@
-document.getElementById("depense").style.display = "none";
-document.getElementById("gain").style.display = "none";
-document.getElementById("compte").style.display = "none";
-document.getElementById("transaction").style.display = "none";
-
 function ShowFormGain() {
     if (document.getElementById("gain").style.display == "block") {
         document.getElementById("gain").style.display = "none";
@@ -48,3 +43,7 @@ function showAddTransactAuto() {
         document.getElementById("transaction").style.display = "none";
     }
 }
+document.getElementById("depense").style.display = "none";
+document.getElementById("gain").style.display = "none";
+document.getElementById("compte").style.display = "none";
+document.getElementById("transaction").style.display = "none";

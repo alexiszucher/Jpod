@@ -58,6 +58,9 @@
                 $request2->execute();
                 $transaction_auto['dateDerniereMAJ'] = date('Y-m-d', strtotime($transaction_auto['dateDerniereMAJ'].' + 1 days'));
             }
+            $request2 = $bdd->prepare("INSERT INTO transactions(id_application,montant,gains,date) VALUES(".$transaction_auto['id_application'].", ".$transaction_auto['montant'].", ".$transaction_auto['gains'].", '".$transaction_auto['dateDerniereMAJ']."')");
+            $request2->execute();
+            $transaction_auto['dateDerniereMAJ'] = date('Y-m-d', strtotime($transaction_auto['dateDerniereMAJ'].' + 1 days'));
             $bdd->query("UPDATE transactions_automatiques SET dateDerniereMAJ = '".$transaction_auto['dateDerniereMAJ']."' WHERE id = ".$transaction_auto['id']);
         }
     }
