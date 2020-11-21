@@ -47,20 +47,18 @@
     {
         include("BDDConnection.php");
         $date = date('Y-m-d');
+        $dateAdd1day = date('Y-m-d', strtotime($date.' + 1 days'));
         $request = $bdd->prepare("SELECT * from transactions_automatiques");
         $request->execute();
 
         while($transaction_auto = $request->fetch(PDO::FETCH_ASSOC))
         {
-            while($transaction_auto['dateDerniereMAJ'] != $date)
+            while($transaction_auto['dateDerniereMAJ'] != $dateAdd1day)
             {
                 $request2 = $bdd->prepare("INSERT INTO transactions(id_application,montant,gains,date) VALUES(".$transaction_auto['id_application'].", ".$transaction_auto['montant'].", ".$transaction_auto['gains'].", '".$transaction_auto['dateDerniereMAJ']."')");
                 $request2->execute();
                 $transaction_auto['dateDerniereMAJ'] = date('Y-m-d', strtotime($transaction_auto['dateDerniereMAJ'].' + 1 days'));
             }
-            $request2 = $bdd->prepare("INSERT INTO transactions(id_application,montant,gains,date) VALUES(".$transaction_auto['id_application'].", ".$transaction_auto['montant'].", ".$transaction_auto['gains'].", '".$transaction_auto['dateDerniereMAJ']."')");
-            $request2->execute();
-            $transaction_auto['dateDerniereMAJ'] = date('Y-m-d', strtotime($transaction_auto['dateDerniereMAJ'].' + 1 days'));
             $bdd->query("UPDATE transactions_automatiques SET dateDerniereMAJ = '".$transaction_auto['dateDerniereMAJ']."' WHERE id = ".$transaction_auto['id']);
         }
     }
