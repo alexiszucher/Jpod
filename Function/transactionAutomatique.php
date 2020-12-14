@@ -43,6 +43,10 @@
         }
     }
 
+    /**
+     * Cette fonction va permettre d'ajouter des transactions automatiques, meme pour le jour d'aujourd'hui. En faisant une date + 1, cela nous permet de d'avoir la date de demain
+     * et de faire la mise a jour jusqu'a aujourd'hui avec une condition derniere maj != demain. Si la derniere maj est demain, je ne mets pas encore la transation
+     */
     function checkMAJTransactionsAutos()
     {
         include("BDDConnection.php");

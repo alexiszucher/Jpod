@@ -59,6 +59,3 @@ CREATE TABLE taches
     ischeck int NOT NULL,
     CONSTRAINT fk_taches_sujets FOREIGN KEY(id_sujets) REFERENCES sujets(id)
 );
-
-INSERT INTO users(email,mdp) VALUES('alexiszucher@gmail.com',MD5('Alexis7957'));
-INSERT INTO applications(libelle,url,img,leads) VALUES("Affiliation Tremplin","at.php","at.png",90);
